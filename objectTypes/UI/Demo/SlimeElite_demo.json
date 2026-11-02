@@ -1,0 +1,58 @@
+{
+	"name": "SlimeElite_demo",
+	"plugin-id": "Sprite",
+	"sid": 203598536236211,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 99,
+						"height": 41,
+						"originX": 0.5555555555555556,
+						"originY": 0.6829268292682927,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8087155,
+						"collisionPoly": {
+							"points": [
+								0.494949494949495,
+								0.024390243902439025,
+								0.5858585858585859,
+								0.024390243902439025,
+								0.6868686868686869,
+								0.07317073170731707,
+								0.98989898989899,
+								0.4146341463414634,
+								0.9797979797979798,
+								0.975609756097561,
+								0.010101010101010102,
+								0.9512195121951219,
+								0.3939393939393939,
+								0.07317073170731707
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 549171552622316,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

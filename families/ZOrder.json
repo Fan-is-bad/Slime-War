@@ -1,0 +1,29 @@
+{
+	"name": "ZOrder",
+	"plugin-id": "Sprite",
+	"sid": 775532964190800,
+	"instanceVariables": [
+		{
+			"name": "ZLayer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 167976419670844
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Slime2",
+		"Slime1",
+		"FireSlime1",
+		"FireSlime2",
+		"SlimeElite1",
+		"SlimeElite2",
+		"Helmet",
+		"GhostSlime1",
+		"GhostSlime2",
+		"ShieldSlime1",
+		"ShieldSlime2"
+	]
+}

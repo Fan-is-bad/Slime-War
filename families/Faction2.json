@@ -1,0 +1,135 @@
+{
+	"name": "Faction2",
+	"plugin-id": "Sprite",
+	"sid": 839274375044144,
+	"instanceVariables": [
+		{
+			"name": "resistance",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 658972001189009
+		},
+		{
+			"name": "recovery",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 419757960144967
+		},
+		{
+			"name": "impact",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 489522601635318
+		},
+		{
+			"name": "rate",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 823606256023682
+		},
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 230469564001944
+		},
+		{
+			"name": "cd",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 725056061647422
+		},
+		{
+			"name": "speed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 246259562771245
+		},
+		{
+			"name": "sweep",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 799960393462932
+		},
+		{
+			"name": "Armor",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 788195925643767
+		},
+		{
+			"name": "Armed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 249820486132494
+		},
+		{
+			"name": "Knockback",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 632439602705258
+		},
+		{
+			"name": "Poisoned",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 296365448813427
+		},
+		{
+			"name": "Attacker_UID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 874970325066533
+		},
+		{
+			"name": "Block",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 471438699970314
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 589688222804767
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 623751771851558
+		},
+		{
+			"behaviorId": "FedericoCalchera_HP",
+			"name": "HP",
+			"sid": 766949046299946
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 885364626269498
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Slime2",
+		"FireSlime2",
+		"SlimeElite2",
+		"GhostSlime2",
+		"ShieldSlime2"
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"name": "Projectile2",
+	"plugin-id": "Sprite",
+	"sid": 485125653650266,
+	"instanceVariables": [
+		{
+			"name": "Spread",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 828801652055810
+		},
+		{
+			"name": "Damaged",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 108863797669623
+		},
+		{
+			"name": "Attacker",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 652464287088341
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 609339848073639
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"fireball2"
+	]
+}

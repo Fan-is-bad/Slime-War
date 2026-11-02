@@ -1,0 +1,54 @@
+{
+	"name": "GhostSlime_demo",
+	"plugin-id": "Sprite",
+	"sid": 984334104497181,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 33,
+						"originX": 0.5612244897959183,
+						"originY": 0.8484848484848485,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9575439,
+						"collisionPoly": {
+							"points": [
+								0.47959183673469385,
+								0.030303030303030304,
+								0.6326530612244898,
+								0.12121212121212122,
+								0.9897959183673469,
+								0.9696969696969697,
+								0.01020408163265306,
+								0.9393939393939394,
+								0.19387755102040816,
+								0.48484848484848486
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 840765540646246,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

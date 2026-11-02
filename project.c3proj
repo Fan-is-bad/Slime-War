@@ -1,0 +1,552 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 50603,
+	"name": "New project",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "HTMLElement",
+			"name": "HTML Element",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "FedericoCalchera_HP",
+			"name": "HP",
+			"author": "FedericoCalchera",
+			"bundled": false,
+			"version": "2.0.0.1",
+			"sdkVersion": 2
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "randomizetiling",
+			"name": "Randomize tiling",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "Better Outline",
+			"author": "skymen",
+			"bundled": false,
+			"version": "2.1.0.1"
+		}
+	],
+	"uniqueId": "gdqd7zj69rg",
+	"objectTypes": {
+		"items": [
+			"Mouse",
+			"Keyboard",
+			"Array1",
+			"Array2",
+			"Audio",
+			"HTMLElement"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Slime1",
+					"Slime2",
+					"FireSlime1",
+					"FireSlime2",
+					"SlimeElite1",
+					"SlimeElite2",
+					"GhostSlime1",
+					"GhostSlime2",
+					"ShieldSlime1",
+					"ShieldSlime2"
+				],
+				"subfolders": [],
+				"name": "Characters"
+			},
+			{
+				"items": [
+					"DeployMenu",
+					"Midline",
+					"Center",
+					"Endscreen",
+					"Black"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"FireSlime_cost",
+							"GhostSlime_cost",
+							"Money1",
+							"Money2",
+							"Next",
+							"Restart",
+							"ShieldSlime_cost",
+							"Slime_cost",
+							"SlimeElite_cost",
+							"unit1",
+							"unit2"
+						],
+						"subfolders": [],
+						"name": "Text"
+					},
+					{
+						"items": [
+							"FireSlime_demo",
+							"GhostSlime_demo",
+							"ShieldSlime_Demo",
+							"Slime_demo",
+							"SlimeElite_demo"
+						],
+						"subfolders": [],
+						"name": "Demo"
+					}
+				],
+				"name": "UI"
+			},
+			{
+				"items": [
+					"Background",
+					"TiledBackground"
+				],
+				"subfolders": [],
+				"name": "Background"
+			},
+			{
+				"items": [
+					"HealthFull1",
+					"HealthFull2",
+					"HealthLoss1",
+					"HealthLoss2",
+					"Bar1",
+					"Bar2"
+				],
+				"subfolders": [],
+				"name": "Health"
+			},
+			{
+				"items": [
+					"fireball1",
+					"fireball2"
+				],
+				"subfolders": [],
+				"name": "Projectile"
+			},
+			{
+				"items": [
+					"Sandbox",
+					"Warfare",
+					"Guide",
+					"StartScreen"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			},
+			{
+				"items": [
+					"Helmet",
+					"Ghost"
+				],
+				"subfolders": [],
+				"name": "Effects"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Faction2",
+			"Faction1",
+			"Health",
+			"ZOrder",
+			"UItext",
+			"Demo",
+			"Projectile1",
+			"Projectile2"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Menu",
+			"Battle",
+			"Warfare1",
+			"Warfare2",
+			"Warfare3",
+			"Warfare4",
+			"Warfare5",
+			"sprite sheet",
+			"Guide"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Menu Event",
+			"Battle event"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "floraphonic-fireball-whoosh-1-179125.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 579563383240574,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "freesound_community-teleport-36569.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 831196903827706,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "freesound_community-small-knife-whoosh-101795.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 461357801015202,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "yodguard-spear_thrust-6-382403.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 398271517072508,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "saboteurcomics-superfast-crunch-405118.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 359238722348322,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "freesound_community-landing-on-grass-40650.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261667225420541,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "freesound_community-menu-button-88360.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 973924946581541,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 747917713171004,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 346875925705574,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 197159188386954,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 257423900621286,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 339754542720147,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 887184998924915,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 334838070050365,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "生成像素风slime-war.png",
+					"type": "image/png",
+					"sid": 183156590045311,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"saveLLMContextFile": true,
+		"pixelRounding": false,
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"fixedFramerate": 30,
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"zAxisScale": "regular",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": null
+}

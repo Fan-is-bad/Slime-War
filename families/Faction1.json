@@ -1,0 +1,135 @@
+{
+	"name": "Faction1",
+	"plugin-id": "Sprite",
+	"sid": 754938611651014,
+	"instanceVariables": [
+		{
+			"name": "recovery",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 877152607568541
+		},
+		{
+			"name": "resistance",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 421687747881895
+		},
+		{
+			"name": "impact",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 122316688525107
+		},
+		{
+			"name": "rate",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 272944720757687
+		},
+		{
+			"name": "damage",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 281974813028010
+		},
+		{
+			"name": "cd",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 606322173722345
+		},
+		{
+			"name": "speed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 321573651690409
+		},
+		{
+			"name": "sweep",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 773656111957833
+		},
+		{
+			"name": "Armor",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 616380778783877
+		},
+		{
+			"name": "Armed",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 692298318580326
+		},
+		{
+			"name": "Knockback",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 300588080427775
+		},
+		{
+			"name": "Poisoned",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 332060346390369
+		},
+		{
+			"name": "Attacker_UID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 702180104394881
+		},
+		{
+			"name": "Block",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 709945112563971
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 306508693972672
+		},
+		{
+			"behaviorId": "Turret",
+			"name": "Turret",
+			"sid": 362516883456571
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 896894246506371
+		},
+		{
+			"behaviorId": "FedericoCalchera_HP",
+			"name": "HP",
+			"sid": 376315414551486
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Slime1",
+		"FireSlime1",
+		"SlimeElite1",
+		"GhostSlime1",
+		"ShieldSlime1"
+	]
+}

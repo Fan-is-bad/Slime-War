@@ -1,0 +1,7326 @@
+{
+	"name": "Battle event",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Count1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979872655155485
+		},
+		{
+			"eventType": "variable",
+			"name": "Count2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306106060534951
+		},
+		{
+			"eventType": "variable",
+			"name": "Place_name",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 424817014870960
+		},
+		{
+			"eventType": "variable",
+			"name": "Place_Cost",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 385015927057024
+		},
+		{
+			"eventType": "variable",
+			"name": "Money1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 476192973976049
+		},
+		{
+			"eventType": "variable",
+			"name": "Money2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 287581126812726
+		},
+		{
+			"eventType": "variable",
+			"name": "start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 929700823676521
+		},
+		{
+			"eventType": "variable",
+			"name": "IsSandbox",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 601104752410287
+		},
+		{
+			"eventType": "variable",
+			"name": "LevelMoney",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 874584485468785
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Direction and Z",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 677785999314584
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction1",
+							"sid": 471466284496334,
+							"parameters": {
+								"first-angle": "0",
+								"second-angle": "90"
+							}
+						},
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction1",
+							"sid": 504999591032405,
+							"parameters": {
+								"first-angle": "270",
+								"second-angle": "360"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Faction1",
+							"sid": 821436032332174,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Faction1",
+							"sid": 401077885233986,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 613197198793566,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction1",
+							"sid": 519302528003820,
+							"parameters": {
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Faction1",
+							"sid": 523536773571425,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Faction1",
+							"sid": 436261863102865,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 521013383920039
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction2",
+							"sid": 357447928076262,
+							"parameters": {
+								"first-angle": "0",
+								"second-angle": "90"
+							}
+						},
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction2",
+							"sid": 128837475543500,
+							"parameters": {
+								"first-angle": "270",
+								"second-angle": "360"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Faction2",
+							"sid": 325873981540974,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Faction2",
+							"sid": 436497891892735,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 478310535423898,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Faction2",
+							"sid": 429630026583158,
+							"parameters": {
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Faction2",
+							"sid": 793093439666715,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Faction2",
+							"sid": 240982270187648,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 530171921735381
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 268695911487193
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "ZOrder",
+							"sid": 170692118897695,
+							"parameters": {
+								"instance-variable": "ZLayer",
+								"value": "ZOrder.y"
+							}
+						},
+						{
+							"id": "sort-z-order",
+							"objectClass": "System",
+							"sid": 487208197434177,
+							"parameters": {
+								"object": "ZOrder",
+								"instance-variable": {
+									"name": "ZLayer",
+									"objectClass": "ZOrder"
+								}
+							}
+						}
+					],
+					"sid": 642176270739649
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 666676431042845,
+							"parameters": {
+								"variable": "start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Faction2",
+							"sid": 592413443474207,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 253954278692060
+				}
+			],
+			"sid": 235094183376111
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Health",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Faction2",
+							"sid": 798017656557668
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 885262069783428,
+							"parameters": {
+								"object-to-create": "HealthFull2",
+								"layer": "0",
+								"x": "Faction2.x",
+								"y": "Faction2.Y-Faction2.height-10",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 115074166128813,
+							"parameters": {
+								"object-to-create": "HealthLoss2",
+								"layer": "0",
+								"x": "Faction2.x",
+								"y": "Faction2.Y-Faction2.height-10",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Faction2",
+							"sid": 785460000855003,
+							"parameters": {
+								"child": "HealthFull2",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Faction2",
+							"sid": 855295640869859,
+							"parameters": {
+								"child": "HealthLoss2",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthFull2",
+							"sid": 421537995041418,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction2.UID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthLoss2",
+							"sid": 241605530665831,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction2.UID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Bar2",
+							"sid": 948278386432992,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction2.UID"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "HealthLoss2",
+							"sid": 546824428719851,
+							"parameters": {
+								"where": "behind",
+								"object": "HealthFull2"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "HealthFull2",
+							"sid": 185346675856391,
+							"parameters": {
+								"width": "Faction2.Width"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "HealthLoss2",
+							"sid": 723293543032228,
+							"parameters": {
+								"width": "Faction2.Width"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "HealthFull2",
+							"sid": 907940580784018,
+							"parameters": {
+								"height": "Faction2.Height/2"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "HealthLoss2",
+							"sid": 704197001750957,
+							"parameters": {
+								"height": "Faction2.Height/2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthLoss2",
+							"sid": 648093256554823,
+							"parameters": {
+								"instance-variable": "num",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 942564159074626,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 432427637031112,
+									"parameters": {
+										"count": "Faction2.HP.Max/50-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Faction2",
+									"sid": 312881696707193,
+									"parameters": {
+										"unique-id": "Bar2.SpriteUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HealthLoss2",
+									"sid": 238965436866890,
+									"parameters": {
+										"instance-variable": "dist",
+										"value": "HealthLoss2.Width/(Faction2.HP.Max/50)"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 389286472692926,
+									"parameters": {
+										"object-to-create": "Bar2",
+										"layer": "0",
+										"x": "Healthloss2.BBoxLeft+Healthloss2.num*Healthloss2.dist",
+										"y": "Faction2.Y-Faction2.height-10",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "add-child",
+									"objectClass": "Faction2",
+									"sid": 407692268415780,
+									"parameters": {
+										"child": "Bar2",
+										"transform-x": true,
+										"transform-y": true,
+										"transform-z-elevation": true,
+										"transform-w": false,
+										"transform-h": false,
+										"transform-d": false,
+										"transform-a": false,
+										"transform-o": false,
+										"transform-visibility": false,
+										"destroy-with-parent": true
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "Bar2",
+									"sid": 102981815695103,
+									"parameters": {
+										"height": "Faction2.Height/2"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "HealthLoss2",
+									"sid": 432760282378029,
+									"parameters": {
+										"instance-variable": "num",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 475350757395449
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onanychange",
+							"objectClass": "Faction2",
+							"sid": 571944793451307,
+							"behaviorType": "HP"
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 787731526270851,
+							"parameters": {
+								"object": "HealthFull2"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Faction2",
+							"sid": 643579580387501,
+							"parameters": {
+								"unique-id": "HealthFull2.SpriteUID"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 604400960617251,
+							"parameters": {
+								"object": "HealthLoss2",
+								"expression": "HealthLoss2.SpriteUID",
+								"comparison": 0,
+								"value": "HealthFull2.SpriteUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "HealthFull2",
+							"sid": 870658846082349,
+							"parameters": {
+								"width": "HealthLoss2.Width*Faction2.HP.NormalizedCurrent"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "HealthFull2",
+							"sid": 260791033937386,
+							"parameters": {
+								"x": "HealthLoss2.BBoxLeft+HealthFull2.width/2"
+							}
+						}
+					],
+					"sid": 656460875804318
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Faction1",
+							"sid": 930630090640723
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 854165854989185,
+							"parameters": {
+								"object-to-create": "HealthFull1",
+								"layer": "0",
+								"x": "Faction1.x",
+								"y": "Faction1.Y-Faction1.height-10",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 540272464822940,
+							"parameters": {
+								"object-to-create": "HealthLoss1",
+								"layer": "0",
+								"x": "Faction1.x",
+								"y": "Faction1.Y-Faction1.height-10",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Faction1",
+							"sid": 940723442364192,
+							"parameters": {
+								"child": "HealthFull1",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Faction1",
+							"sid": 449015097107012,
+							"parameters": {
+								"child": "HealthLoss1",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-z-elevation": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-d": false,
+								"transform-a": false,
+								"transform-o": false,
+								"transform-visibility": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthFull1",
+							"sid": 791281327736596,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction1.UID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthLoss1",
+							"sid": 894051341077310,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction1.UID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Bar1",
+							"sid": 837419083441076,
+							"parameters": {
+								"instance-variable": "SpriteUID",
+								"value": "Faction1.UID"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "HealthLoss1",
+							"sid": 555479882734234,
+							"parameters": {
+								"where": "behind",
+								"object": "HealthFull1"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "HealthFull1",
+							"sid": 363067182086601,
+							"parameters": {
+								"width": "Faction1.Width"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "HealthLoss1",
+							"sid": 277217831075569,
+							"parameters": {
+								"width": "Faction1.Width"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "HealthFull1",
+							"sid": 578058349620716,
+							"parameters": {
+								"height": "Faction1.Height/2"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "HealthLoss1",
+							"sid": 180918265633733,
+							"parameters": {
+								"height": "Faction1.Height/2"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HealthLoss1",
+							"sid": 995261015845770,
+							"parameters": {
+								"instance-variable": "num",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 259758022474249,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 978359927725518,
+									"parameters": {
+										"count": "Faction1.HP.Max/50-1"
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Faction1",
+									"sid": 686576124728756,
+									"parameters": {
+										"unique-id": "Bar1.SpriteUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HealthLoss1",
+									"sid": 451773008767381,
+									"parameters": {
+										"instance-variable": "dist",
+										"value": "HealthLoss1.Width/(Faction1.HP.Max/50)"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 913553249545636,
+									"parameters": {
+										"object-to-create": "Bar1",
+										"layer": "0",
+										"x": "HealthLoss1.BBoxLeft+HealthLoss1.num*HealthLoss1.dist",
+										"y": "Faction1.Y-Faction1.height-10",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "add-child",
+									"objectClass": "Faction1",
+									"sid": 803003135695449,
+									"parameters": {
+										"child": "Bar1",
+										"transform-x": true,
+										"transform-y": true,
+										"transform-z-elevation": true,
+										"transform-w": false,
+										"transform-h": false,
+										"transform-d": false,
+										"transform-a": false,
+										"transform-o": false,
+										"transform-visibility": false,
+										"destroy-with-parent": true
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "Bar1",
+									"sid": 454124337470494,
+									"parameters": {
+										"height": "Faction1.Height/2"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "HealthLoss1",
+									"sid": 161119698181072,
+									"parameters": {
+										"instance-variable": "num",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 975844988326598
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "onanychange",
+							"objectClass": "Faction1",
+							"sid": 843172508279760,
+							"behaviorType": "HP"
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 154708350649481,
+							"parameters": {
+								"object": "HealthFull1"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Faction1",
+							"sid": 631910976723205,
+							"parameters": {
+								"unique-id": "HealthFull1.SpriteUID"
+							}
+						},
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 233843054593843,
+							"parameters": {
+								"object": "HealthLoss1",
+								"expression": "HealthLoss1.SpriteUID",
+								"comparison": 0,
+								"value": "HealthFull1.SpriteUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "HealthFull1",
+							"sid": 176062141495058,
+							"parameters": {
+								"width": "HealthLoss1.Width*Faction1.HP.NormalizedCurrent"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "HealthFull1",
+							"sid": 151687709987854,
+							"parameters": {
+								"x": "HealthLoss1.BBoxLeft+HealthFull1.width/2"
+							}
+						}
+					],
+					"sid": 220677761157966
+				}
+			],
+			"sid": 618704038639431
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Control",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "UI and Viewport",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 629894349000338,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 188927339231820,
+											"parameters": {
+												"key": 68
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-at-angle",
+											"objectClass": "Center",
+											"sid": 215949075363289,
+											"parameters": {
+												"angle": "0",
+												"distance": "4"
+											}
+										}
+									],
+									"sid": 792771149567564
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 504992877923225,
+											"parameters": {
+												"key": 87
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-at-angle",
+											"objectClass": "Center",
+											"sid": 330395748136008,
+											"parameters": {
+												"angle": "270",
+												"distance": "4"
+											}
+										}
+									],
+									"sid": 211954266475183
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 141720704962160,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-at-angle",
+											"objectClass": "Center",
+											"sid": 568178641583741,
+											"parameters": {
+												"angle": "180",
+												"distance": "4"
+											}
+										}
+									],
+									"sid": 571110803221655
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 578584833824573,
+											"parameters": {
+												"key": 83
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-at-angle",
+											"objectClass": "Center",
+											"sid": 371636185619819,
+											"parameters": {
+												"angle": "90",
+												"distance": "4"
+											}
+										}
+									],
+									"sid": 694164954220044
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-mouse-wheel",
+											"objectClass": "Mouse",
+											"sid": 654280195379297,
+											"parameters": {
+												"direction": "up"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 214597610608010,
+											"parameters": {
+												"first-value": "0.5",
+												"comparison": 2,
+												"second-value": "LayerScale(0)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-scale",
+											"objectClass": "System",
+											"sid": 955558839282289,
+											"parameters": {
+												"layer": "0",
+												"scale": "LayerScale(0)-0.01"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Center",
+											"sid": 291157481162033,
+											"parameters": {
+												"x": "(Center.X-854)/50+Center.x",
+												"y": "(Center.Y-480)/50+Center.y"
+											}
+										}
+									],
+									"sid": 226353156013489
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-mouse-wheel",
+											"objectClass": "Mouse",
+											"sid": 546486088903822,
+											"parameters": {
+												"direction": "down"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 776807919442209,
+											"parameters": {
+												"first-value": "1",
+												"comparison": 4,
+												"second-value": "LayerScale(0)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-scale",
+											"objectClass": "System",
+											"sid": 886825281836553,
+											"parameters": {
+												"layer": "0",
+												"scale": "LayerScale(0)+0.01"
+											}
+										}
+									],
+									"sid": 869921767720090
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 421059606842685
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-scale",
+									"objectClass": "System",
+									"sid": 709233354969050,
+									"parameters": {
+										"layer": "0",
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "clear",
+									"objectClass": "Array1",
+									"sid": 206645150941521,
+									"parameters": {
+										"value": "0"
+									}
+								},
+								{
+									"id": "clear",
+									"objectClass": "Array2",
+									"sid": 199330167348607,
+									"parameters": {
+										"value": "0"
+									}
+								}
+							],
+							"sid": 745127646384740,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 527768482964566,
+											"parameters": {
+												"variable": "IsSandbox"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 911196839663042,
+											"parameters": {
+												"object": "Faction2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 224801008002356,
+											"parameters": {
+												"variable": "Count2",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 201988162473112,
+											"parameters": {
+												"x": "Count2",
+												"y": "1",
+												"value": "Faction2.ObjectTypeName"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 248075538586487,
+											"parameters": {
+												"x": "Count2",
+												"y": "2",
+												"value": "Faction2.X"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 171333397734186,
+											"parameters": {
+												"x": "Count2",
+												"y": "3",
+												"value": "Faction2.Y"
+											}
+										}
+									],
+									"sid": 422410538719064
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 702943766637628,
+											"parameters": {
+												"string": "\"Warfare1\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 768974338767509,
+											"parameters": {
+												"variable": "Money2",
+												"value": "385"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 190740256063459,
+											"parameters": {
+												"variable": "Money1",
+												"value": "385"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 106678180740022,
+											"parameters": {
+												"variable": "LevelMoney",
+												"value": "Money1"
+											}
+										}
+									],
+									"sid": 340305266533338
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 447900058177480,
+											"parameters": {
+												"string": "\"Warfare2\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 548708702045941,
+											"parameters": {
+												"variable": "Money2",
+												"value": "520"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 160563126486647,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Money1+520"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 519309082390712,
+											"parameters": {
+												"variable": "LevelMoney",
+												"value": "Money1"
+											}
+										}
+									],
+									"sid": 860000729247340
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 675689739250760,
+											"parameters": {
+												"string": "\"Warfare3\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 954052092718676,
+											"parameters": {
+												"variable": "Money2",
+												"value": "600"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 198351996096356,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Money1+600"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 239817611324826,
+											"parameters": {
+												"variable": "LevelMoney",
+												"value": "Money1"
+											}
+										}
+									],
+									"sid": 658888997009723
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 891585434741801,
+											"parameters": {
+												"string": "\"Warfare4\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 119634198585681,
+											"parameters": {
+												"variable": "Money2",
+												"value": "720"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 937705167862730,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Money1+720"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 893801689854831,
+											"parameters": {
+												"variable": "LevelMoney",
+												"value": "Money1"
+											}
+										}
+									],
+									"sid": 898752641911149
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 656373621547956,
+											"parameters": {
+												"string": "\"Warfare5\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 185353261198111,
+											"parameters": {
+												"variable": "Money2",
+												"value": "1205"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 962420672503427,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Money1+1205"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 972225086296451,
+											"parameters": {
+												"variable": "LevelMoney",
+												"value": "Money1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Next",
+											"sid": 664714358347545,
+											"parameters": {
+												"text": "\"Congratulations on completing all levels!\""
+											}
+										}
+									],
+									"sid": 980399884866499
+								}
+							]
+						}
+					],
+					"sid": 610513760006549
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Deploy",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 946980221360167,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Slime_demo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 171552013279428,
+									"parameters": {
+										"variable": "Place_name",
+										"value": "\"Slime\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 252842083328599,
+									"parameters": {
+										"variable": "Place_Cost",
+										"value": "20"
+									}
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 628309113157317,
+									"parameters": {
+										"cursor-style": "grabbing"
+									}
+								}
+							],
+							"sid": 463288563326156
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 247695418380008,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "FireSlime_demo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 115001493130277,
+									"parameters": {
+										"variable": "Place_name",
+										"value": "\"FireSlime\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 502990731039505,
+									"parameters": {
+										"variable": "Place_Cost",
+										"value": "40"
+									}
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 984854481178491,
+									"parameters": {
+										"cursor-style": "grabbing"
+									}
+								}
+							],
+							"sid": 211840905708791
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 126741376839235,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "SlimeElite_demo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 132110133962000,
+									"parameters": {
+										"variable": "Place_name",
+										"value": "\"SlimeElite\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 952655487024872,
+									"parameters": {
+										"variable": "Place_Cost",
+										"value": "75"
+									}
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 382250396018862,
+									"parameters": {
+										"cursor-style": "grabbing"
+									}
+								}
+							],
+							"sid": 465168521923423
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 939494693280311,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "GhostSlime_demo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 296546686082113,
+									"parameters": {
+										"variable": "Place_name",
+										"value": "\"GhostSlime\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 637462876012178,
+									"parameters": {
+										"variable": "Place_Cost",
+										"value": "80"
+									}
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 592262095997755,
+									"parameters": {
+										"cursor-style": "grabbing"
+									}
+								}
+							],
+							"sid": 384850412240995
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 782637478554747,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "ShieldSlime_Demo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 358766813936023,
+									"parameters": {
+										"variable": "Place_name",
+										"value": "\"ShieldSlime\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 763137655318876,
+									"parameters": {
+										"variable": "Place_Cost",
+										"value": "60"
+									}
+								},
+								{
+									"id": "set-cursor-style2",
+									"objectClass": "Mouse",
+									"sid": 762006825184682,
+									"parameters": {
+										"cursor-style": "grabbing"
+									}
+								}
+							],
+							"sid": 183996953270489
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 811283355493077,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 813781076192665,
+									"parameters": {
+										"variable": "start"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 211338253912373,
+									"parameters": {
+										"variable": "Place_name",
+										"comparison": 0,
+										"value": "\"\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Restart",
+									"sid": 568718372698264,
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 193346698530995,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 236327506464876,
+											"parameters": {
+												"variable": "Count2",
+												"comparison": 2,
+												"value": "40"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 690869335325335,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 4,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 376281895333528,
+											"parameters": {
+												"interval-seconds": "0.15"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 819980147685481,
+											"parameters": {
+												"object": "DeployMenu"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 791037038534972,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 924872254047585,
+											"parameters": {
+												"object": "Faction2"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 712596105553317,
+											"parameters": {
+												"variable": "Count2",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 568128252950531,
+											"parameters": {
+												"x": "Count2",
+												"y": "1",
+												"value": "Place_name&\"2\""
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 215760927009577,
+											"parameters": {
+												"x": "Count2",
+												"y": "2",
+												"value": "Mouse.X(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 230603218717765,
+											"parameters": {
+												"x": "Count2",
+												"y": "3",
+												"value": "Mouse.Y(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 143698023250284,
+											"parameters": {
+												"x": "Count2",
+												"y": "4",
+												"value": "Place_Cost"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 595056062999519,
+											"parameters": {
+												"variable": "Money2",
+												"value": "Array2.At(Count2,4)"
+											}
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 302043270248811,
+											"parameters": {
+												"object-name": "Array2.At(Count2,1)",
+												"layer": "0",
+												"x": "Array2.At(Count2,2)",
+												"y": "Array2.At(Count2,3)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 383236913180399,
+											"parameters": {
+												"audio-file": {
+													"path": "freesound_community-landing-on-grass-40650"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 976744416136548
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 570394217179425,
+											"parameters": {
+												"variable": "Count1",
+												"comparison": 2,
+												"value": "40"
+											}
+										},
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 819165471083050,
+											"parameters": {
+												"interval-seconds": "0.15"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 836077126386416,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 2,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 491658012562218,
+											"parameters": {
+												"object": "DeployMenu"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 966482317058509,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 896845645547046,
+											"parameters": {
+												"object": "Faction1"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 455947973855954,
+											"parameters": {
+												"variable": "Count1",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 721102517583000,
+											"parameters": {
+												"x": "Count1",
+												"y": "1",
+												"value": "Place_name&\"1\""
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 856576381057736,
+											"parameters": {
+												"x": "Count1",
+												"y": "2",
+												"value": "Mouse.X(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 794221204426737,
+											"parameters": {
+												"x": "Count1",
+												"y": "3",
+												"value": "Mouse.Y(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 894324429038762,
+											"parameters": {
+												"x": "Count1",
+												"y": "4",
+												"value": "Place_Cost"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 522468566395753,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Array1.At(Count1,4)"
+											}
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 419823163688142,
+											"parameters": {
+												"object-name": "Array1.At(Count1,1)",
+												"layer": "0",
+												"x": "Array1.At(Count1,2)",
+												"y": "Array1.At(Count1,3)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 279215901469814,
+											"parameters": {
+												"audio-file": {
+													"path": "freesound_community-landing-on-grass-40650"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 669680008751319
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 472964803296374,
+											"parameters": {
+												"variable": "Count1",
+												"comparison": 2,
+												"value": "40"
+											}
+										},
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 232193857202752,
+											"parameters": {
+												"interval-seconds": "0.15"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 826033504295760,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 2,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 129774779129402,
+											"parameters": {
+												"object": "DeployMenu"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 642785809461574,
+											"parameters": {
+												"variable": "IsSandbox"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 818784477294513,
+											"parameters": {
+												"object": "Faction1"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 537658646540170,
+											"parameters": {
+												"first-value": "Money1-Place_Cost",
+												"comparison": 5,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 600734955158566,
+											"parameters": {
+												"variable": "Count1",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 722305993930920,
+											"parameters": {
+												"x": "Count1",
+												"y": "1",
+												"value": "Place_name&\"1\""
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 278439821645320,
+											"parameters": {
+												"x": "Count1",
+												"y": "2",
+												"value": "Mouse.X(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 817558734054848,
+											"parameters": {
+												"x": "Count1",
+												"y": "3",
+												"value": "Mouse.Y(0)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 215667824508910,
+											"parameters": {
+												"x": "Count1",
+												"y": "4",
+												"value": "Place_Cost"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 613850465527239,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Array1.At(Count1,4)"
+											}
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 642532328480428,
+											"parameters": {
+												"object-name": "Array1.At(Count1,1)",
+												"layer": "0",
+												"x": "Array1.At(Count1,2)",
+												"y": "Array1.At(Count1,3)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 752247107825265,
+											"parameters": {
+												"audio-file": {
+													"path": "freesound_community-landing-on-grass-40650"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 165792003681769
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 162697127045851,
+									"parameters": {
+										"variable": "start"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-animation",
+									"objectClass": "Faction1",
+									"sid": 717049188507952
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "Faction2",
+									"sid": 946304749508457
+								}
+							],
+							"sid": 237449934825921,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-click",
+											"objectClass": "Mouse",
+											"sid": 360447303987584,
+											"parameters": {
+												"mouse-button": "right",
+												"click-type": "clicked"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 241857636081440,
+											"parameters": {
+												"variable": "Count1",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 285245893225787,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 2,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 458898204773977,
+											"parameters": {
+												"object": "Faction1"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 142805488345245,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction1",
+											"sid": 919054123725902
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 405869125897612,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Array1.At(Count1,4)"
+											}
+										},
+										{
+											"id": "set-at-x",
+											"objectClass": "Array1",
+											"sid": 883235937073979,
+											"parameters": {
+												"x": "count1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 466107981838601,
+											"parameters": {
+												"variable": "Count1",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 976889924822866
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-click",
+											"objectClass": "Mouse",
+											"sid": 564054584119578,
+											"parameters": {
+												"mouse-button": "right",
+												"click-type": "clicked"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 544328056123792,
+											"parameters": {
+												"variable": "Count1",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 909636459759859,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 2,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 626241542334132,
+											"parameters": {
+												"object": "Faction1"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 485183549729614,
+											"parameters": {
+												"variable": "IsSandbox"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction1",
+											"sid": 298602547920990
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 847499674438069,
+											"parameters": {
+												"variable": "Money1",
+												"value": "Array1.At(Count1,4)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 213541840877894,
+											"parameters": {
+												"x": "count1",
+												"y": "1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 161265866030816,
+											"parameters": {
+												"x": "count1",
+												"y": "2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 650617063286595,
+											"parameters": {
+												"x": "count1",
+												"y": "3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array1",
+											"sid": 362021300287888,
+											"parameters": {
+												"x": "count1",
+												"y": "4",
+												"value": "0"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 218167880246467,
+											"parameters": {
+												"variable": "Count1",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 774420964309120
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-click",
+											"objectClass": "Mouse",
+											"sid": 810777819108320,
+											"parameters": {
+												"mouse-button": "right",
+												"click-type": "clicked"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 306454126185571,
+											"parameters": {
+												"variable": "Count2",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 873189195900477,
+											"parameters": {
+												"first-value": "Mouse.x(0)",
+												"comparison": 4,
+												"second-value": "855"
+											}
+										},
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 354868196824318,
+											"parameters": {
+												"object": "Faction2"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 506612899520342,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction2",
+											"sid": 781888285188773
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 127395460391667,
+											"parameters": {
+												"variable": "Money2",
+												"value": "Array2.At(Count2,4)"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 844775861579308,
+											"parameters": {
+												"x": "Count2",
+												"y": "1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 666423528280135,
+											"parameters": {
+												"x": "Count2",
+												"y": "2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 575231071710685,
+											"parameters": {
+												"x": "Count2",
+												"y": "3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-at-xy",
+											"objectClass": "Array2",
+											"sid": 593549307728594,
+											"parameters": {
+												"x": "Count2",
+												"y": "4",
+												"value": "0"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 196010521094350,
+											"parameters": {
+												"variable": "Count2",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 338937496910667
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 423036866319467,
+											"parameters": {
+												"key": 81
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 165458598477305,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction1",
+											"sid": 301960955671315
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 336849754953156,
+											"parameters": {
+												"variable": "Count1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 252176468564594,
+											"parameters": {
+												"variable": "Money1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Array1",
+											"sid": 731552718388250,
+											"parameters": {
+												"value": "0"
+											}
+										}
+									],
+									"sid": 354826568364207
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 165929118216371,
+											"parameters": {
+												"key": 81
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 243162932310940,
+											"parameters": {
+												"variable": "IsSandbox"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction1",
+											"sid": 574057680147753
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 887034919676821,
+											"parameters": {
+												"variable": "Count1",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 561126539023691,
+											"parameters": {
+												"variable": "Money1",
+												"value": "LevelMoney"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Array1",
+											"sid": 978018602751472,
+											"parameters": {
+												"value": "0"
+											}
+										}
+									],
+									"sid": 693583958155087
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 319486857273158,
+											"parameters": {
+												"key": 69
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 216696653356573,
+											"parameters": {
+												"variable": "IsSandbox"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction2",
+											"sid": 225013152679073
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 917910848002636,
+											"parameters": {
+												"variable": "Count2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 437054608387272,
+											"parameters": {
+												"variable": "Money2",
+												"value": "0"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Array2",
+											"sid": 358759124404417,
+											"parameters": {
+												"value": "0"
+											}
+										}
+									],
+									"sid": 178146648653210
+								}
+							]
+						}
+					],
+					"sid": 438231564817130
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 515375049935984,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 664265743640206,
+							"parameters": {
+								"variable": "start",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "UItext",
+							"sid": 628871546230094,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Demo",
+							"sid": 845359205328508,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DeployMenu",
+							"sid": 270681393449501,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Midline",
+							"sid": 994140004328025,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 297435528087603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 200997748722125
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "unit1",
+							"sid": 321026400321845,
+							"parameters": {
+								"text": "Count1&\"/40 units\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "unit2",
+							"sid": 275540249265528,
+							"parameters": {
+								"text": "Count2&\"/40 units\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Money1",
+							"sid": 991664890317667,
+							"parameters": {
+								"text": "Money1&\"$\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Money2",
+							"sid": 994237349498943,
+							"parameters": {
+								"text": "Money2&\"$\""
+							}
+						}
+					],
+					"sid": 558378383686746
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 209070595476029,
+							"parameters": {
+								"variable": "IsSandbox"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 802680168170603,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 652242970244993,
+									"parameters": {
+										"variable": "Count2",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 641413990968407,
+									"parameters": {
+										"variable": "start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 722021243065780,
+									"parameters": {
+										"variable": "start",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Restart",
+									"sid": 426173001368906,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 588693160169134
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 740675882802800,
+									"parameters": {
+										"variable": "Count1",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 861965303754060,
+									"parameters": {
+										"variable": "start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 736829428909726,
+									"parameters": {
+										"variable": "start",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Restart",
+									"sid": 522192219786445,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 139636149889371
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 610055849057398,
+							"parameters": {
+								"variable": "IsSandbox"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 974853148985101,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 753311206317165,
+									"parameters": {
+										"variable": "Count2",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 709940549463008,
+									"parameters": {
+										"variable": "start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 172641224254500,
+									"parameters": {
+										"variable": "start",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Restart",
+									"sid": 836965903046890,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Endscreen",
+									"sid": 783327490261748,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Next",
+									"sid": 354207379642762,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 226043817885770,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 363956924234046,
+											"parameters": {
+												"key": 32
+											}
+										},
+										{
+											"id": "test-regex",
+											"objectClass": "System",
+											"sid": 328027512851399,
+											"parameters": {
+												"string": "\"Warfare5\"",
+												"regex": "LayoutName",
+												"flags": "\"gi\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 509367273133964,
+											"parameters": {
+												"which": "next"
+											}
+										},
+										{
+											"id": "reset-eventvar",
+											"objectClass": "System",
+											"sid": 864370699010048,
+											"parameters": {
+												"variable": "Count2"
+											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "Array2",
+											"sid": 979079618671686,
+											"parameters": {
+												"value": "0"
+											}
+										},
+										{
+											"id": "reset-eventvar",
+											"objectClass": "System",
+											"sid": 440337376715593,
+											"parameters": {
+												"variable": "Count1"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 324411799762835,
+											"parameters": {
+												"variable": "start",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 770961924125925
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 388047530213938,
+									"parameters": {
+										"variable": "Count1",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 381283917045522,
+									"parameters": {
+										"variable": "start"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 233887239311501,
+									"parameters": {
+										"variable": "start",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Restart",
+									"sid": 797363648877849,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Endscreen",
+									"sid": 481400113988322,
+									"parameters": {
+										"animation": "\"Lose\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Endscreen",
+									"sid": 180976468689841,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Black",
+									"sid": 296296197572218,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetOpacity",
+										"end-value": "75",
+										"time": "2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 725996319175115
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 677755507020575,
+							"parameters": {
+								"key": 82
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "DeployMenu",
+							"sid": 406583884963112,
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 843430713203090,
+							"parameters": {
+								"variable": "IsSandbox"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 806927927291552,
+							"parameters": {
+								"variable": "start",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Faction1",
+							"sid": 665567253837421
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Faction2",
+							"sid": 429416468614517
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Projectile1",
+							"sid": 653294214221594
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Projectile2",
+							"sid": 505961584794144
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 237849674300275,
+							"parameters": {
+								"variable": "Count1",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 972780554908504,
+							"parameters": {
+								"variable": "Count2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 385729436209949,
+							"parameters": {
+								"variable": "Money1",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 388789688470939,
+							"parameters": {
+								"variable": "Money2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "UItext",
+							"sid": 616763239137601,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Demo",
+							"sid": 768175932241202,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DeployMenu",
+							"sid": 603563614227655,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Midline",
+							"sid": 870934574481772,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Restart",
+							"sid": 446967615734972,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endscreen",
+							"sid": 460472456319639,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Black",
+							"sid": 495690374969930,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Helmet",
+							"sid": 668316991680637
+						}
+					],
+					"sid": 899126327477459,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Array1",
+									"sid": 207444876323910,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Array1",
+									"sid": 266422686841785,
+									"parameters": {
+										"x": "Array1.CurX",
+										"y": "1",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 957864288690235,
+									"parameters": {
+										"variable": "Count1",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 296125585904025,
+									"parameters": {
+										"variable": "Money1",
+										"value": "Array1.At(Count1,4)"
+									}
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 523335759865353,
+									"parameters": {
+										"object-name": "Array1.At(Count1,1)",
+										"layer": "0",
+										"x": "Array1.At(Count1,2)",
+										"y": "Array1.At(Count1,3)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 436238289304911
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Array2",
+									"sid": 667008049185060,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Array2",
+									"sid": 408153805549268,
+									"parameters": {
+										"x": "Array2.CurX",
+										"y": "1",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 828775460487661,
+									"parameters": {
+										"variable": "Count2",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 514464754175620,
+									"parameters": {
+										"variable": "Money2",
+										"value": "Array2.At(Count2,4)"
+									}
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 253768122872951,
+									"parameters": {
+										"object-name": "Array2.At(Count2,1)",
+										"layer": "0",
+										"x": "Array2.At(Count2,2)",
+										"y": "Array2.At(Count2,3)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 931973530867504
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 535252935014623,
+							"parameters": {
+								"key": 82
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "DeployMenu",
+							"sid": 712008847554767,
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 644349574147109,
+							"parameters": {
+								"variable": "IsSandbox"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 328789568482698,
+							"parameters": {
+								"variable": "start",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Faction1",
+							"sid": 431682964258923
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Faction2",
+							"sid": 801186451543732
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Projectile1",
+							"sid": 231778650617627
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Projectile2",
+							"sid": 664209370771268
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 629387591549472,
+							"parameters": {
+								"variable": "Count1",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 363976720819299,
+							"parameters": {
+								"variable": "Money1",
+								"value": "LevelMoney"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 969674295485573,
+							"parameters": {
+								"variable": "Count2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "UItext",
+							"sid": 911606294886477,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Demo",
+							"sid": 977230376841518,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DeployMenu",
+							"sid": 879269206898975,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Midline",
+							"sid": 513135272066778,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Restart",
+							"sid": 941770996620690,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Black",
+							"sid": 338220262786412,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Next",
+							"sid": 734866454084610,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Endscreen",
+							"sid": 619858489135298,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Black",
+							"sid": 132697274708751,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Helmet",
+							"sid": 869239658618674
+						}
+					],
+					"sid": 243280978697397,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Array1",
+									"sid": 288402058672338,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Array1",
+									"sid": 508616615110949,
+									"parameters": {
+										"x": "Array1.CurX",
+										"y": "1",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 753600651911742,
+									"parameters": {
+										"variable": "Count1",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 931830882231108,
+									"parameters": {
+										"variable": "Money1",
+										"value": "Array1.At(Count1,4)"
+									}
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 129745690137331,
+									"parameters": {
+										"object-name": "Array1.At(Count1,1)",
+										"layer": "0",
+										"x": "Array1.At(Count1,2)",
+										"y": "Array1.At(Count1,3)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 205571090440849
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Array2",
+									"sid": 606674704812479,
+									"parameters": {
+										"axes": "x"
+									}
+								},
+								{
+									"id": "compare-at-xy",
+									"objectClass": "Array2",
+									"sid": 140222364762395,
+									"parameters": {
+										"x": "Array2.CurX",
+										"y": "1",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 292911261680634,
+									"parameters": {
+										"variable": "Count2",
+										"value": "1"
+									}
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 498166686189921,
+									"parameters": {
+										"object-name": "Array2.At(Count2,1)",
+										"layer": "0",
+										"x": "Array2.At(Count2,2)",
+										"y": "Array2.At(Count2,3)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 414876166032076
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 716686069499980,
+							"parameters": {
+								"variable": "start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 168264509315063,
+							"parameters": {
+								"variable": "Count1",
+								"value": "Faction1.Count"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 344399973242915,
+							"parameters": {
+								"variable": "Count2",
+								"value": "Faction2.Count"
+							}
+						}
+					],
+					"sid": 946787472043757
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 876263511044997,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 436461004467586,
+							"parameters": {
+								"reset-static": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 856867814005128,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 733917916733108
+				}
+			],
+			"sid": 704693869965551
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 177273097559002,
+					"parameters": {
+						"variable": "start"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 253408192704320,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "AI",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Death",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction1",
+											"sid": 627533897185919,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 3,
+												"comparisonvalue": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Faction1",
+											"sid": 405628982680034,
+											"parameters": {
+												"animation": "\"death\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction1",
+											"sid": 789803757386883,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": false
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction1",
+											"sid": 855106124911130,
+											"behaviorType": "Turret",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 979530193871645
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction2",
+											"sid": 238458570905942,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 3,
+												"comparisonvalue": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Faction2",
+											"sid": 485075514333783,
+											"parameters": {
+												"animation": "\"death\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction2",
+											"sid": 321297928559337,
+											"behaviorType": "Turret",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction2",
+											"sid": 585536418633749,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": false
+											}
+										}
+									],
+									"sid": 241251119683596
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction1",
+											"sid": 165183592658933,
+											"parameters": {
+												"animation": "\"death\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction1",
+											"sid": 846890316399791
+										}
+									],
+									"sid": 388201103063396
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction2",
+											"sid": 237682354631097,
+											"parameters": {
+												"animation": "\"death\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Faction2",
+											"sid": 216185422857755
+										}
+									],
+									"sid": 160178730867756
+								}
+							],
+							"sid": 513703239273125
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Target",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 128149618007156,
+											"parameters": {
+												"object": "Faction1"
+											}
+										},
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Faction2",
+											"sid": 401355455624625,
+											"parameters": {
+												"which": "nearest",
+												"x": "Faction1.x",
+												"y": "Faction1.y",
+												"z": "0",
+												"pick-all-tied": false
+											}
+										},
+										{
+											"id": "has-target",
+											"objectClass": "Faction1",
+											"sid": 482715541961250,
+											"behaviorType": "Turret",
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Faction1",
+											"sid": 446819954348902,
+											"parameters": {
+												"instance-variable": "recovery",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction1",
+											"sid": 218416377897178,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": true
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "Faction1",
+											"sid": 387156207453880,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"acceleration": "Faction1.speed"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Faction1",
+											"sid": 667180841809184,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"max-speed": "random(Faction1.speed*0.98,Faction1.speed*1.02)"
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "Faction1",
+											"sid": 170500082744883,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"object": "Faction2",
+												"image-point": "0",
+												"mode": "direct"
+											}
+										},
+										{
+											"id": "add-object-to-target",
+											"objectClass": "Faction1",
+											"sid": 735813017446256,
+											"behaviorType": "Turret",
+											"parameters": {
+												"target": "Faction2"
+											}
+										}
+									],
+									"sid": 972818131094813
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 888378001325763,
+											"parameters": {
+												"object": "Faction2"
+											}
+										},
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Faction1",
+											"sid": 124776967215449,
+											"parameters": {
+												"which": "nearest",
+												"x": "Faction2.x",
+												"y": "Faction2.y",
+												"z": "0",
+												"pick-all-tied": false
+											}
+										},
+										{
+											"id": "has-target",
+											"objectClass": "Faction2",
+											"sid": 707248610413895,
+											"behaviorType": "Turret",
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Faction2",
+											"sid": 420975583098321,
+											"parameters": {
+												"instance-variable": "recovery",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Faction2",
+											"sid": 180156687347757,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"enabled": true
+											}
+										},
+										{
+											"id": "set-acceleration",
+											"objectClass": "Faction2",
+											"sid": 426428315430734,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"acceleration": "Faction2.speed"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Faction2",
+											"sid": 140986156837111,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"max-speed": "random(Faction2.speed*0.98,Faction2.speed*1.02)"
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "Faction2",
+											"sid": 756520724703439,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"object": "Faction1",
+												"image-point": "0",
+												"mode": "direct"
+											}
+										},
+										{
+											"id": "add-object-to-target",
+											"objectClass": "Faction2",
+											"sid": 239503916860389,
+											"behaviorType": "Turret",
+											"parameters": {
+												"target": "Faction1"
+											}
+										}
+									],
+									"sid": 745416552838697
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction1",
+											"sid": 397583364123410,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 4,
+												"comparisonvalue": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Faction1",
+											"sid": 387074502151907,
+											"parameters": {
+												"instance-variable": "recovery",
+												"comparison": 3,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-speed",
+											"objectClass": "Faction1",
+											"sid": 468861497562680,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"comparison": 4,
+												"speed": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 574392277886608,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 756946082521918,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 859465704988865,
+													"parameters": {
+														"animation": "\"Move_W\"",
+														"from": "current-frame"
+													}
+												}
+											],
+											"sid": 936118700388602
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 286418040197640,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 935124299949557,
+													"parameters": {
+														"animation": "\"move\"",
+														"from": "current-frame"
+													}
+												}
+											],
+											"sid": 220249204789321
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Faction2",
+											"sid": 146266035816566,
+											"parameters": {
+												"instance-variable": "recovery",
+												"comparison": 3,
+												"value": "0"
+											}
+										},
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction2",
+											"sid": 547838772128631,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 4,
+												"comparisonvalue": "0"
+											}
+										},
+										{
+											"id": "compare-speed",
+											"objectClass": "Faction2",
+											"sid": 677256291214551,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"comparison": 4,
+												"speed": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 454841177482089,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 996654964316863,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 462106918232443,
+													"parameters": {
+														"animation": "\"Move_W\"",
+														"from": "current-frame"
+													}
+												}
+											],
+											"sid": 388609033532431
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 207377179778673,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 140277053442730,
+													"parameters": {
+														"animation": "\"move\"",
+														"from": "current-frame"
+													}
+												}
+											],
+											"sid": 397841826556272
+										}
+									]
+								}
+							],
+							"sid": 823215276453497
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Mech",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Shield",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Faction1",
+													"sid": 840813545740458,
+													"parameters": {
+														"tags": "\"Shielded\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 932785120337038,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Faction1",
+															"sid": 510766298831828,
+															"parameters": {
+																"instance-variable": "Armed"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 378467065316545,
+															"parameters": {
+																"instance-variable": "resistance",
+																"value": "15"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 605746146542337,
+															"parameters": {
+																"instance-variable": "Block",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 941144618640197
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Faction2",
+													"sid": 698723422592457,
+													"parameters": {
+														"tags": "\"Shielded\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 574117510468225,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Faction2",
+															"sid": 319391800020008,
+															"parameters": {
+																"instance-variable": "Armed"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 922667440772802,
+															"parameters": {
+																"instance-variable": "resistance",
+																"value": "15"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 512601169864666,
+															"parameters": {
+																"instance-variable": "Block",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 126890131215966
+												}
+											]
+										}
+									],
+									"sid": 912335699036746
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Stun",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 806209066203432
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 850572618303496,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction1",
+													"sid": 633041667099603,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Faction1",
+													"sid": 964409405837989
+												}
+											],
+											"sid": 597021094905009
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 215476302849724
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 773715828773203,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction2",
+													"sid": 695016997853892,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Faction2",
+													"sid": 189453143644328
+												}
+											],
+											"sid": 483923486933789
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "hplost",
+													"objectClass": "Faction1",
+													"sid": 318831826953890,
+													"behaviorType": "HP"
+												}
+											],
+											"actions": [],
+											"sid": 737531981457132,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction2",
+															"sid": 929366479497745,
+															"parameters": {
+																"unique-id": "Faction1.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction2",
+															"sid": 422048931777677,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 4,
+																"value": "Faction1.resistance"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 450413548877977,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(random(min(1+((Faction2.impact/Faction1.resistance)-1)*0.7,5.0)*0.6,min(1+((Faction2.impact/Faction1.resistance)-1)*0.7,5.0)*1.4),Faction1.recovery)"
+															}
+														},
+														{
+															"id": "move-at-angle",
+															"objectClass": "Faction1",
+															"sid": 539379161777996,
+															"parameters": {
+																"angle": "angle(Faction1.x, Faction1.y, Faction2.x, Faction2.y)",
+																"distance": "Faction2.Knockback*Faction1.recovery/-2"
+															}
+														}
+													],
+													"sid": 245066616657408
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction2",
+															"sid": 826247609317141,
+															"parameters": {
+																"unique-id": "Faction1.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction2",
+															"sid": 786705355212167,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 3,
+																"value": "Faction1.resistance/2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 134432408412293,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(0,Faction1.recovery)"
+															}
+														}
+													],
+													"sid": 643814062088710
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction2",
+															"sid": 948057706894770,
+															"parameters": {
+																"unique-id": "Faction1.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction2",
+															"sid": 143526777465518,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 4,
+																"value": "Faction1.resistance/2"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction2",
+															"sid": 454349608045197,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 3,
+																"value": "Faction1.resistance"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 501471147860845,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(random(min(((Faction2.impact/Faction1.resistance)^1.5)*1.0,4.0)*0.6,min(((Faction2.impact/Faction1.resistance)^1.5)*1.0,4.0)*1.4),Faction1.recovery)"
+															}
+														},
+														{
+															"id": "move-at-angle",
+															"objectClass": "Faction1",
+															"sid": 724181771048176,
+															"parameters": {
+																"angle": "angle(Faction1.x, Faction1.y, Faction2.x, Faction2.y)",
+																"distance": "Faction2.Knockback*Faction1.recovery/-2"
+															}
+														}
+													],
+													"sid": 144062726407497
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "hplost",
+													"objectClass": "Faction2",
+													"sid": 565751819757487,
+													"behaviorType": "HP"
+												}
+											],
+											"actions": [],
+											"sid": 446045989386773,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction1",
+															"sid": 866283373642336,
+															"parameters": {
+																"unique-id": "Faction2.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction1",
+															"sid": 324045114828270,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 4,
+																"value": "Faction2.resistance"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 910537650514975,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(random(min(1+((Faction1.impact/Faction2.resistance)-1)*0.7,5.0)*0.6,min(1+((Faction1.impact/Faction2.resistance)-1)*0.7,5.0)*1.4),Faction2.recovery)"
+															}
+														},
+														{
+															"id": "move-at-angle",
+															"objectClass": "Faction2",
+															"sid": 393765613500486,
+															"parameters": {
+																"angle": "angle(Faction2.x, Faction2.y, Faction1.x, Faction1.y)",
+																"distance": "Faction1.Knockback*Faction2.recovery/-2"
+															}
+														}
+													],
+													"sid": 239398758207117
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction1",
+															"sid": 868245012866487,
+															"parameters": {
+																"unique-id": "Faction2.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction1",
+															"sid": 625542280028696,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 3,
+																"value": "Faction2.resistance/2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 783699430824920,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(0,Faction2.recovery)"
+															}
+														}
+													],
+													"sid": 857165721463672
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction1",
+															"sid": 476043393871049,
+															"parameters": {
+																"unique-id": "Faction2.Attacker_UID"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction1",
+															"sid": 608532890228045,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 4,
+																"value": "Faction2.resistance/2"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Faction1",
+															"sid": 885386587776095,
+															"parameters": {
+																"instance-variable": "impact",
+																"comparison": 3,
+																"value": "Faction2.resistance"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 221723138694148,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "max(random(min(((Faction1.impact/Faction2.resistance)^1.5)*1.0,4.0)*0.6,min(((Faction1.impact/Faction2.resistance)^1.5)*1.0,4.0)*1.4),Faction2.recovery)"
+															}
+														},
+														{
+															"id": "move-at-angle",
+															"objectClass": "Faction2",
+															"sid": 903951866040987,
+															"parameters": {
+																"angle": "angle(Faction2.x, Faction2.y, Faction1.x, Faction1.y)",
+																"distance": "Faction1.Knockback*Faction2.recovery/-2"
+															}
+														}
+													],
+													"sid": 158837656254001
+												}
+											]
+										}
+									],
+									"sid": 860656997982780
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Poison",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 215391892067875,
+													"parameters": {
+														"instance-variable": "Poisoned",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 897299926153839,
+													"parameters": {
+														"interval-seconds": "1.0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-hp",
+													"objectClass": "Faction1",
+													"sid": 357325261274184,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction1.HP.Current-(Faction1.HP.Max-Faction1.Armor)*0.05",
+														"runtriggers": false
+													}
+												},
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction1",
+													"sid": 567149875328944,
+													"parameters": {
+														"instance-variable": "Poisoned",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 889338246240631
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 560413096160324,
+													"parameters": {
+														"instance-variable": "Poisoned",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 824625834519184,
+													"parameters": {
+														"interval-seconds": "1.0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-hp",
+													"objectClass": "Faction2",
+													"sid": 957653315589848,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction2.HP.Current-(Faction2.HP.Max-Faction2.Armor)*0.05",
+														"runtriggers": false
+													}
+												},
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction2",
+													"sid": 978692616961110,
+													"parameters": {
+														"instance-variable": "Poisoned",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 511725210297974
+										}
+									],
+									"sid": 367940648064925
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Armor",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Faction1",
+													"sid": 993065518895704,
+													"parameters": {
+														"tags": "\"Armed\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 557906952840104,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-hp",
+															"objectClass": "Faction1",
+															"sid": 544118371344609,
+															"behaviorType": "HP",
+															"parameters": {
+																"comparison": 3,
+																"comparisonvalue": "Faction1.HP.Max-Faction1.Armor"
+															}
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Faction1",
+															"sid": 646158981202749,
+															"parameters": {
+																"instance-variable": "Armed"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Faction1",
+															"sid": 920701442796707,
+															"parameters": {
+																"object": "Helmet",
+																"layer": "0",
+																"image-point": "0",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Faction1",
+															"sid": 538301675229697,
+															"parameters": {
+																"instance-variable": "Armed",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 959009385013194,
+															"parameters": {
+																"instance-variable": "resistance",
+																"value": "Faction1.resistance*0.6"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 616393292726672,
+															"parameters": {
+																"instance-variable": "speed",
+																"value": "Faction1.speed*1.15"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 313578056340105,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 271153452052589,
+															"parameters": {
+																"instance-variable": "cd",
+																"value": "0"
+															}
+														},
+														{
+															"id": "move-to-position",
+															"objectClass": "Helmet",
+															"sid": 725236053948031,
+															"behaviorType": "MoveTo",
+															"parameters": {
+																"x": "random(-50,50)+Faction1.x",
+																"y": "Faction1.Y+15",
+																"mode": "direct"
+															}
+														},
+														{
+															"id": "set-speed",
+															"objectClass": "Helmet",
+															"sid": 191345879112962,
+															"behaviorType": "Rotate",
+															"parameters": {
+																"speed": "100"
+															}
+														}
+													],
+													"sid": 108735790387640,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "has-tags",
+																	"objectClass": "Faction1",
+																	"sid": 488089492262967,
+																	"parameters": {
+																		"tags": "\"Shielded\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-animation",
+																	"objectClass": "Helmet",
+																	"sid": 558470977910941,
+																	"parameters": {
+																		"animation": "\"Electric\"",
+																		"from": "beginning"
+																	}
+																}
+															],
+															"sid": 310314012558148
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Faction2",
+													"sid": 450749639288154,
+													"parameters": {
+														"tags": "\"Armed\""
+													}
+												}
+											],
+											"actions": [],
+											"sid": 633430489431499,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-hp",
+															"objectClass": "Faction2",
+															"sid": 318381037555556,
+															"behaviorType": "HP",
+															"parameters": {
+																"comparison": 3,
+																"comparisonvalue": "Faction2.HP.Max-Faction2.Armor"
+															}
+														},
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "Faction2",
+															"sid": 303496714386476,
+															"parameters": {
+																"instance-variable": "Armed"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Faction2",
+															"sid": 148908480727216,
+															"parameters": {
+																"instance-variable": "Armed",
+																"value": "false"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 683152037111033,
+															"parameters": {
+																"instance-variable": "resistance",
+																"value": "Faction2.resistance*0.6"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 817871572514982,
+															"parameters": {
+																"instance-variable": "speed",
+																"value": "Faction2.speed*1.15"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 785427540471533,
+															"parameters": {
+																"instance-variable": "recovery",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 649217574111507,
+															"parameters": {
+																"instance-variable": "cd",
+																"value": "0"
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Faction2",
+															"sid": 340679403997047,
+															"parameters": {
+																"object": "Helmet",
+																"layer": "0",
+																"image-point": "0",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "move-to-position",
+															"objectClass": "Helmet",
+															"sid": 905582941181045,
+															"behaviorType": "MoveTo",
+															"parameters": {
+																"x": "random(-50,50)+Faction2.x",
+																"y": "Faction2.Y+15",
+																"mode": "direct"
+															}
+														},
+														{
+															"id": "set-speed",
+															"objectClass": "Helmet",
+															"sid": 715940645172592,
+															"behaviorType": "Rotate",
+															"parameters": {
+																"speed": "100"
+															}
+														}
+													],
+													"sid": 763304237876673,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "has-tags",
+																	"objectClass": "Faction2",
+																	"sid": 379555930613202,
+																	"parameters": {
+																		"tags": "\"Shielded\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-animation",
+																	"objectClass": "Helmet",
+																	"sid": 901510207672919,
+																	"parameters": {
+																		"animation": "\"Electric\"",
+																		"from": "beginning"
+																	}
+																}
+															],
+															"sid": 550542506230388
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-moving",
+													"objectClass": "Helmet",
+													"sid": 341127584556851,
+													"behaviorType": "MoveTo",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Helmet",
+													"sid": 826580490112143
+												}
+											],
+											"sid": 445045564620552
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-moving",
+													"objectClass": "Helmet",
+													"sid": 808240699194420,
+													"behaviorType": "MoveTo",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Helmet",
+													"sid": 408951814997738
+												}
+											],
+											"sid": 499602528527110
+										}
+									],
+									"sid": 806320965510947
+								}
+							],
+							"sid": 198500812097374
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Attack",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Sound",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "GhostSlime1",
+													"sid": 231442133971016,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "GhostSlime2",
+													"sid": 985294046494484,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 950974752814870,
+													"parameters": {
+														"audio-file": {
+															"path": "freesound_community-small-knife-whoosh-101795"
+														},
+														"loop": "not-looping",
+														"volume": "10",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 186674476118012,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Slime1",
+													"sid": 806000166147561,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Slime2",
+													"sid": 984077558404924,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "ShieldSlime2",
+													"sid": 795454791377449,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "ShieldSlime1",
+													"sid": 482210650136756,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 757615683550208,
+													"parameters": {
+														"audio-file": {
+															"path": "saboteurcomics-superfast-crunch-405118"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 861675586564394,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "SlimeElite1",
+													"sid": 708149548765758,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "SlimeElite2",
+													"sid": 819274914032771,
+													"parameters": {
+														"animation": "\"Attack\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "SlimeElite1",
+													"sid": 748853904836797,
+													"parameters": {
+														"animation": "\"Attack_W\""
+													}
+												},
+												{
+													"id": "on-animation-finished",
+													"objectClass": "SlimeElite2",
+													"sid": 843786777340471,
+													"parameters": {
+														"animation": "\"Attack_W\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 897623910225656,
+													"parameters": {
+														"audio-file": {
+															"path": "yodguard-spear_thrust-6-382403"
+														},
+														"loop": "not-looping",
+														"volume": "2",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 307716522359573,
+											"isOrBlock": true
+										}
+									],
+									"sid": 957149631330350
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Ghost",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "hplost",
+													"objectClass": "Faction1",
+													"sid": 923141926014284,
+													"behaviorType": "HP"
+												},
+												{
+													"id": "pick-children",
+													"objectClass": "Faction1",
+													"sid": 901032159816808,
+													"parameters": {
+														"child": "Ghost",
+														"which": "own"
+													}
+												},
+												{
+													"id": "is-visible",
+													"objectClass": "Ghost",
+													"sid": 953874917343048
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Ghost",
+													"sid": 594833877894273,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Ghost",
+													"sid": 646465286713559,
+													"behaviorType": "Timer",
+													"parameters": {
+														"duration": "5",
+														"type": "once",
+														"tag": "\"Ghost\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction1",
+													"sid": 375160647281384,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "0"
+													}
+												},
+												{
+													"id": "heal-hp",
+													"objectClass": "Faction1",
+													"sid": 412587532230718,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction1.HP.DamageReceived*1.5"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 468659407208202,
+													"parameters": {
+														"audio-file": {
+															"path": "freesound_community-teleport-36569"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 564658898954696,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction2",
+															"sid": 908612422835713,
+															"parameters": {
+																"tags": "\"Range\""
+															}
+														},
+														{
+															"id": "pick-random-instance",
+															"objectClass": "System",
+															"sid": 423448602053770,
+															"parameters": {
+																"object": "Faction2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position-to-another-object",
+															"objectClass": "Faction1",
+															"sid": 764698558756865,
+															"parameters": {
+																"object": "Faction2",
+																"image-point-optional": "0"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction2",
+															"sid": 473441749791933,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction1.damage*2-Faction2.Block"
+															}
+														}
+													],
+													"sid": 545857333080294,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction2",
+																	"sid": 785533999807928
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction1",
+																	"sid": 111976570168079,
+																	"parameters": {
+																		"angle": "0",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 162920682428305
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction2",
+																	"sid": 992057424018053,
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction1",
+																	"sid": 253265600401718,
+																	"parameters": {
+																		"angle": "180",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 793226540993005
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 162526074392766
+														},
+														{
+															"id": "pick-nearestfurthest",
+															"objectClass": "Faction2",
+															"sid": 951754401080719,
+															"parameters": {
+																"which": "furthest",
+																"x": "Faction1.x",
+																"y": "Faction1.y",
+																"z": "0",
+																"pick-all-tied": false
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position-to-another-object",
+															"objectClass": "Faction1",
+															"sid": 569679557169781,
+															"parameters": {
+																"object": "Faction2",
+																"image-point-optional": "0"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction2",
+															"sid": 933262121117730,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction1.damage*2-Faction2.Block"
+															}
+														}
+													],
+													"sid": 845980919244744,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction2",
+																	"sid": 708627976265127
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction1",
+																	"sid": 108418068135735,
+																	"parameters": {
+																		"angle": "0",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 957133467433454
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction2",
+																	"sid": 247714397460153,
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction1",
+																	"sid": 616612182624268,
+																	"parameters": {
+																		"angle": "180",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 530117297724078
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-timer",
+													"objectClass": "Ghost",
+													"sid": 308815211165489,
+													"behaviorType": "Timer",
+													"parameters": {
+														"tag": "\"Ghost\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Ghost",
+													"sid": 452309031025064,
+													"parameters": {
+														"visibility": "visible"
+													}
+												}
+											],
+											"sid": 491408843684051
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "hplost",
+													"objectClass": "Faction2",
+													"sid": 314750935358889,
+													"behaviorType": "HP"
+												},
+												{
+													"id": "pick-children",
+													"objectClass": "Faction2",
+													"sid": 848017692314234,
+													"parameters": {
+														"child": "Ghost",
+														"which": "own"
+													}
+												},
+												{
+													"id": "is-visible",
+													"objectClass": "Ghost",
+													"sid": 377652026578717
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Ghost",
+													"sid": 108465530816867,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Ghost",
+													"sid": 682309699328752,
+													"behaviorType": "Timer",
+													"parameters": {
+														"duration": "5",
+														"type": "once",
+														"tag": "\"Ghost\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction2",
+													"sid": 671790016221427,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "0"
+													}
+												},
+												{
+													"id": "heal-hp",
+													"objectClass": "Faction2",
+													"sid": 138065748318741,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction2.HP.DamageReceived*1.5"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 662223425093716,
+													"parameters": {
+														"audio-file": {
+															"path": "freesound_community-teleport-36569"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 957881539296957,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction1",
+															"sid": 985564038041790,
+															"parameters": {
+																"tags": "\"Range\""
+															}
+														},
+														{
+															"id": "pick-random-instance",
+															"objectClass": "System",
+															"sid": 458404685327203,
+															"parameters": {
+																"object": "Faction1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position-to-another-object",
+															"objectClass": "Faction2",
+															"sid": 286676130538555,
+															"parameters": {
+																"object": "Faction1",
+																"image-point-optional": "0"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction1",
+															"sid": 206313976909549,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction2.damage*2-Faction1.Block"
+															}
+														}
+													],
+													"sid": 390685085526215,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction1",
+																	"sid": 772536982074994
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction2",
+																	"sid": 763779395461408,
+																	"parameters": {
+																		"angle": "0",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 660284460205802
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction1",
+																	"sid": 107540456736358,
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction2",
+																	"sid": 220470485399501,
+																	"parameters": {
+																		"angle": "180",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 785580334843525
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 993132395895395
+														},
+														{
+															"id": "pick-nearestfurthest",
+															"objectClass": "Faction1",
+															"sid": 735221847899608,
+															"parameters": {
+																"which": "furthest",
+																"x": "Faction2.x",
+																"y": "Faction2.Y",
+																"z": "0",
+																"pick-all-tied": false
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-position-to-another-object",
+															"objectClass": "Faction2",
+															"sid": 259495044654315,
+															"parameters": {
+																"object": "Faction1",
+																"image-point-optional": "0"
+															}
+														},
+														{
+															"id": "move-at-angle",
+															"objectClass": "Faction2",
+															"sid": 136993910682320,
+															"parameters": {
+																"angle": "Faction1.Angle",
+																"distance": "-30"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction1",
+															"sid": 717012493296973,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction2.damage*2-Faction1.Block"
+															}
+														}
+													],
+													"sid": 462968371104753,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction1",
+																	"sid": 391523186050492
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction2",
+																	"sid": 469252128322524,
+																	"parameters": {
+																		"angle": "0",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 580722208237776
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Faction1",
+																	"sid": 611478759567105,
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "move-at-angle",
+																	"objectClass": "Faction2",
+																	"sid": 654168540680122,
+																	"parameters": {
+																		"angle": "180",
+																		"distance": "35"
+																	}
+																}
+															],
+															"sid": 245559371849339
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-key-pressed",
+													"objectClass": "Keyboard",
+													"sid": 148076778285746,
+													"parameters": {
+														"key": 32
+													}
+												}
+											],
+											"actions": [],
+											"sid": 861385856701610,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction1",
+															"sid": 447592921649724,
+															"parameters": {
+																"tags": "\"Ghost\""
+															}
+														},
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 278803607142769,
+															"parameters": {
+																"object": "Faction1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Faction1",
+															"sid": 363181984114129,
+															"parameters": {
+																"object": "Ghost",
+																"layer": "0",
+																"image-point": "0",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Faction1",
+															"sid": 506172956484173,
+															"parameters": {
+																"child": "Ghost",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-z-elevation": true,
+																"transform-w": false,
+																"transform-h": false,
+																"transform-d": false,
+																"transform-a": false,
+																"transform-o": false,
+																"transform-visibility": false,
+																"destroy-with-parent": true
+															}
+														}
+													],
+													"sid": 364830233056669
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction2",
+															"sid": 283638971192239,
+															"parameters": {
+																"tags": "\"Ghost\""
+															}
+														},
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 649631739041249,
+															"parameters": {
+																"object": "Faction2"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "spawn-another-object",
+															"objectClass": "Faction2",
+															"sid": 571801025828054,
+															"parameters": {
+																"object": "Ghost",
+																"layer": "0",
+																"image-point": "0",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "add-child",
+															"objectClass": "Faction2",
+															"sid": 240523726560555,
+															"parameters": {
+																"child": "Ghost",
+																"transform-x": true,
+																"transform-y": true,
+																"transform-z-elevation": true,
+																"transform-w": false,
+																"transform-h": false,
+																"transform-d": false,
+																"transform-a": false,
+																"transform-o": false,
+																"transform-visibility": false,
+																"destroy-with-parent": true
+															}
+														}
+													],
+													"sid": 315690604075596
+												}
+											]
+										}
+									],
+									"sid": 791408486731081
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction1",
+											"sid": 623729062680548,
+											"parameters": {
+												"animation": "\"Attack_W\""
+											}
+										},
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction1",
+											"sid": 545063197471609,
+											"parameters": {
+												"animation": "\"attack\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 592927060974786,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction2",
+													"sid": 243606080979640,
+													"parameters": {
+														"unique-id": "Faction1.Turret.TargetUID"
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Faction1",
+													"sid": 825496920016485,
+													"parameters": {
+														"tags": "\"Melee\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction2",
+													"sid": 210110002427441,
+													"parameters": {
+														"instance-variable": "Attacker_UID",
+														"value": "Faction1.UID"
+													}
+												},
+												{
+													"id": "lose-hp",
+													"objectClass": "Faction2",
+													"sid": 226813998721199,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction1.damage-Faction2.Block"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction1",
+													"sid": 540525280931248,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "random(Faction1.rate*0.98,Faction1.rate*1.02)"
+													}
+												}
+											],
+											"sid": 596374806458252,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction1",
+															"sid": 269003724080664,
+															"parameters": {
+																"tags": "\"Poison\""
+															}
+														},
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction2",
+															"sid": 504794731860482,
+															"parameters": {
+																"unique-id": "Faction1.Turret.TargetUID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 216414639690481,
+															"parameters": {
+																"instance-variable": "Poisoned",
+																"value": "2"
+															}
+														}
+													],
+													"sid": 760684102479963
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction2",
+											"sid": 938475891296587,
+											"parameters": {
+												"animation": "\"Attack_W\""
+											}
+										},
+										{
+											"id": "on-animation-finished",
+											"objectClass": "Faction2",
+											"sid": 339855215552289,
+											"parameters": {
+												"animation": "\"attack\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 953223558401626,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-tags",
+													"objectClass": "Faction2",
+													"sid": 840287521173061,
+													"parameters": {
+														"tags": "\"Melee\""
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction1",
+													"sid": 705371493802774,
+													"parameters": {
+														"unique-id": "Faction2.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction1",
+													"sid": 733955086439210,
+													"parameters": {
+														"instance-variable": "Attacker_UID",
+														"value": "Faction2.UID"
+													}
+												},
+												{
+													"id": "lose-hp",
+													"objectClass": "Faction1",
+													"sid": 624262451548150,
+													"behaviorType": "HP",
+													"parameters": {
+														"amount": "Faction2.damage-Faction1.Block"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction2",
+													"sid": 880745791023420,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "random(Faction2.rate*0.98,Faction2.rate*1.02)"
+													}
+												}
+											],
+											"sid": 381861672954458,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "has-tags",
+															"objectClass": "Faction2",
+															"sid": 757750747975427,
+															"parameters": {
+																"tags": "\"Poison\""
+															}
+														},
+														{
+															"id": "pick-by-unique-id",
+															"objectClass": "Faction1",
+															"sid": 321445549443134,
+															"parameters": {
+																"unique-id": "Faction2.Turret.TargetUID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 954138554374766,
+															"parameters": {
+																"instance-variable": "Poisoned",
+																"value": "2"
+															}
+														}
+													],
+													"sid": 468337363440901
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction2",
+											"sid": 660674685448204,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 4,
+												"comparisonvalue": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 687159686043508,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-target",
+													"objectClass": "Faction2",
+													"sid": 117782703054120,
+													"behaviorType": "Turret"
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 102391641713649,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 972266729643030,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction1",
+													"sid": 567077023689645,
+													"parameters": {
+														"unique-id": "Faction2.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 548070573547123,
+													"parameters": {
+														"animation": "\"attack\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Faction2",
+													"sid": 648915854403406,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "0"
+													}
+												}
+											],
+											"sid": 867988468244789
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-target",
+													"objectClass": "Faction2",
+													"sid": 306349765058257,
+													"behaviorType": "Turret"
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 474301820317539,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 871153112608541,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction1",
+													"sid": 766196559656372,
+													"parameters": {
+														"unique-id": "Faction2.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 931425435772651,
+													"parameters": {
+														"animation": "\"attack_W\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Faction2",
+													"sid": 564402842373107,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "0"
+													}
+												}
+											],
+											"sid": 473688931648800
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 825860313501524
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 565348547074956,
+													"parameters": {
+														"instance-variable": "recovery",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 778138174662706,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction2",
+													"sid": 561103736396785,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 951196950316369,
+													"parameters": {
+														"animation": "\"movehit\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Faction2",
+													"sid": 252596153947841,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"speed": "Faction2.MoveTo.speed*0.96"
+													}
+												}
+											],
+											"sid": 920175713436086
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 141656625515331
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction2",
+													"sid": 178530943536789,
+													"parameters": {
+														"instance-variable": "recovery",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction2",
+													"sid": 751390559020121,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction2",
+													"sid": 716242421576104,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Faction2",
+													"sid": 926713144087508,
+													"parameters": {
+														"animation": "\"movehit_W\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Faction2",
+													"sid": 967683523835957,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"speed": "Faction2.MoveTo.speed*0.96"
+													}
+												}
+											],
+											"sid": 113834142413202
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-hp",
+											"objectClass": "Faction1",
+											"sid": 187309894986751,
+											"behaviorType": "HP",
+											"parameters": {
+												"comparison": 4,
+												"comparisonvalue": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 843672360144332,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-target",
+													"objectClass": "Faction1",
+													"sid": 700067634941781,
+													"behaviorType": "Turret"
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 143314792940223,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 548435786985234,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction2",
+													"sid": 958659561999057,
+													"parameters": {
+														"unique-id": "Faction1.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 484345095627785,
+													"parameters": {
+														"animation": "\"attack\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Faction1",
+													"sid": 291922061919715,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "0"
+													}
+												}
+											],
+											"sid": 740734588534122
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "has-target",
+													"objectClass": "Faction1",
+													"sid": 196870444331056,
+													"behaviorType": "Turret"
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 725345626186694,
+													"parameters": {
+														"instance-variable": "cd",
+														"comparison": 3,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 387930515220605,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction2",
+													"sid": 177947750601058,
+													"parameters": {
+														"unique-id": "Faction1.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 426431711303043,
+													"parameters": {
+														"animation": "\"attack_W\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-max-speed",
+													"objectClass": "Faction1",
+													"sid": 692143936147459,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "0"
+													}
+												}
+											],
+											"sid": 778519830159081
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 488397309960757
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 135182299511170,
+													"parameters": {
+														"instance-variable": "recovery",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 546149214083129,
+													"parameters": {
+														"instance-variable": "Armed"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction1",
+													"sid": 291784752297241,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 996906436677696,
+													"parameters": {
+														"animation": "\"movehit\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Faction1",
+													"sid": 925826586448998,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"speed": "Faction1.MoveTo.speed*0.96"
+													}
+												}
+											],
+											"sid": 228600295212568
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-tick",
+													"objectClass": "System",
+													"sid": 617150420015890
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Faction1",
+													"sid": 113956490032581,
+													"parameters": {
+														"instance-variable": "recovery",
+														"comparison": 4,
+														"value": "0"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Faction1",
+													"sid": 168551801396478,
+													"parameters": {
+														"instance-variable": "Armed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "Faction1",
+													"sid": 294096942033733,
+													"parameters": {
+														"instance-variable": "recovery",
+														"value": "1/60"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Faction1",
+													"sid": 794320375030869,
+													"parameters": {
+														"animation": "\"movehit_W\"",
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Faction1",
+													"sid": 433030375337260,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"speed": "Faction1.MoveTo.speed*0.96"
+													}
+												}
+											],
+											"sid": 394488906601392
+										}
+									]
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Projectile",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Faction1",
+													"sid": 424057045744110,
+													"parameters": {
+														"animation": "\"attack\""
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Faction1",
+													"sid": 623152512777140,
+													"parameters": {
+														"tags": "\"Range\""
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Faction1",
+													"sid": 179031732643803,
+													"parameters": {
+														"tags": "\"fire\""
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction2",
+													"sid": 642192570983701,
+													"parameters": {
+														"unique-id": "Faction1.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Faction1",
+													"sid": 673062107559209,
+													"parameters": {
+														"object": "fireball1",
+														"layer": "0",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "Faction1",
+													"sid": 425128925106250,
+													"parameters": {
+														"child": "fireball1",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-z-elevation": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-d": false,
+														"transform-a": false,
+														"transform-o": false,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												},
+												{
+													"id": "set-angle-toward-position",
+													"objectClass": "fireball1",
+													"sid": 940070662151793,
+													"parameters": {
+														"x": "Faction2.x",
+														"y": "Faction2.y"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction1",
+													"sid": 968963590166017,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "Faction1.rate"
+													}
+												}
+											],
+											"sid": 570639673788070
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "Projectile1",
+													"sid": 736955936039545,
+													"parameters": {
+														"animation": "\"Explode\""
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Projectile1",
+													"sid": 123685311584162,
+													"parameters": {
+														"instance-variable": "Damaged"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [],
+											"sid": 527199715293318,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-comparison",
+															"objectClass": "System",
+															"sid": 245235630600741,
+															"parameters": {
+																"object": "Faction2",
+																"expression": "abs(distance(Faction2.X,Faction2.Y,Projectile1.X,Projectile1.Y))",
+																"comparison": 3,
+																"value": "Projectile1.Spread"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction2",
+															"sid": 564561624485086,
+															"parameters": {
+																"instance-variable": "Attacker_UID",
+																"value": "Projectile1.ParentUID"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction2",
+															"sid": 691069960972106,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction1.damage-Faction2.block"
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Projectile1",
+															"sid": 205783913888624,
+															"parameters": {
+																"instance-variable": "Damaged",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 634761840112795
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Projectile1",
+													"sid": 379233695303809,
+													"parameters": {
+														"animation": "\"Explode\""
+													}
+												},
+												{
+													"id": "compare-distance-travelled",
+													"objectClass": "Projectile1",
+													"sid": 909411391115504,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"comparison": 5,
+														"distance": "500"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Projectile1",
+													"sid": 528593138261707
+												}
+											],
+											"sid": 420744171817375,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "Projectile1",
+													"sid": 128222162134816,
+													"parameters": {
+														"object": "Faction2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Projectile1",
+													"sid": 515798027577366,
+													"parameters": {
+														"animation": "\"Explode\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Projectile1",
+													"sid": 205304597824007,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "0"
+													}
+												},
+												{
+													"id": "set-scale",
+													"objectClass": "Projectile1",
+													"sid": 391370573723088,
+													"parameters": {
+														"scale": "2"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 441512042030180,
+													"parameters": {
+														"audio-file": {
+															"path": "floraphonic-fireball-whoosh-1-179125"
+														},
+														"loop": "not-looping",
+														"volume": "-2.5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 984374685691148
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Faction2",
+													"sid": 490584737467071,
+													"parameters": {
+														"animation": "\"attack\""
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Faction2",
+													"sid": 278232609619569,
+													"parameters": {
+														"tags": "\"Range\""
+													}
+												},
+												{
+													"id": "has-tags",
+													"objectClass": "Faction2",
+													"sid": 571029256852834,
+													"parameters": {
+														"tags": "\"fire\""
+													}
+												},
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Faction1",
+													"sid": 497735519216553,
+													"parameters": {
+														"unique-id": "Faction2.Turret.TargetUID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Faction2",
+													"sid": 999869111964709,
+													"parameters": {
+														"object": "fireball2",
+														"layer": "0",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "Faction2",
+													"sid": 475488408302360,
+													"parameters": {
+														"child": "fireball2",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-z-elevation": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-d": false,
+														"transform-a": false,
+														"transform-o": false,
+														"transform-visibility": false,
+														"destroy-with-parent": false
+													}
+												},
+												{
+													"id": "set-angle-toward-position",
+													"objectClass": "fireball2",
+													"sid": 856915945930558,
+													"parameters": {
+														"x": "Faction1.x",
+														"y": "Faction1.y"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Faction2",
+													"sid": 127742252645919,
+													"parameters": {
+														"instance-variable": "cd",
+														"value": "Faction2.rate"
+													}
+												}
+											],
+											"sid": 686710930082677
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "Projectile2",
+													"sid": 891560817713429,
+													"parameters": {
+														"animation": "\"Explode\""
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Projectile2",
+													"sid": 780532837372933,
+													"parameters": {
+														"instance-variable": "Damaged"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [],
+											"sid": 603542794907756,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "pick-by-comparison",
+															"objectClass": "System",
+															"sid": 525221271750060,
+															"parameters": {
+																"object": "Faction1",
+																"expression": "abs(distance(Faction1.X,Faction1.Y,Projectile2.X,Projectile2.Y))",
+																"comparison": 3,
+																"value": "Projectile2.Spread"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Faction1",
+															"sid": 634197771769119,
+															"parameters": {
+																"instance-variable": "Attacker_UID",
+																"value": "projectile2.ParentUID"
+															}
+														},
+														{
+															"id": "lose-hp",
+															"objectClass": "Faction1",
+															"sid": 303954690234983,
+															"behaviorType": "HP",
+															"parameters": {
+																"amount": "Faction2.damage-Faction1.Block"
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Projectile2",
+															"sid": 431000491195048,
+															"parameters": {
+																"instance-variable": "Damaged",
+																"value": "true"
+															}
+														}
+													],
+													"sid": 343418755270112
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-collision-with-another-object",
+													"objectClass": "Projectile2",
+													"sid": 405254905264870,
+													"parameters": {
+														"object": "Faction1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Projectile2",
+													"sid": 927215306367942,
+													"parameters": {
+														"animation": "\"Explode\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-speed",
+													"objectClass": "Projectile2",
+													"sid": 686031683028343,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "0"
+													}
+												},
+												{
+													"id": "set-scale",
+													"objectClass": "Projectile2",
+													"sid": 990107856652013,
+													"parameters": {
+														"scale": "2"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 940247713699455,
+													"parameters": {
+														"audio-file": {
+															"path": "floraphonic-fireball-whoosh-1-179125"
+														},
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 975528975917121
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "Projectile2",
+													"sid": 777098438903644,
+													"parameters": {
+														"animation": "\"Explode\""
+													}
+												},
+												{
+													"id": "compare-distance-travelled",
+													"objectClass": "Projectile1",
+													"sid": 440300213252636,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"comparison": 5,
+														"distance": "650"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "Projectile2",
+													"sid": 645781513555066
+												}
+											],
+											"sid": 200645668485332,
+											"isOrBlock": true
+										}
+									],
+									"sid": 107782856144985
+								}
+							],
+							"sid": 496320314738473
+						}
+					],
+					"sid": 800614470405143
+				}
+			]
+		}
+	],
+	"sid": 998837111034831
+}

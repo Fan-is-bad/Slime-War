@@ -1,0 +1,19 @@
+# Construct 3 editor UI state
+# Ignore per-machine layout state, but keep the shared project-files state.
+*.uistate.json
+!projectfiles.uistate.json
+
+# Autosave backups
+*_autosave_.c3p
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor / IDE folders
+.vscode/
+.idea/
+
+# Shared by default, so keep these commented out
+# tilemapBrushes/
+# palettes/

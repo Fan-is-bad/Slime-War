@@ -1,0 +1,21 @@
+{
+	"name": "Demo",
+	"plugin-id": "Sprite",
+	"sid": 918839156606108,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 748524094683710
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Slime_demo",
+		"FireSlime_demo",
+		"SlimeElite_demo",
+		"GhostSlime_demo",
+		"ShieldSlime_Demo"
+	]
+}

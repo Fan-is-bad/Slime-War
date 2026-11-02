@@ -1,0 +1,153 @@
+{
+	"name": "Menu Event",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Sandbox",
+					"sid": 603012827576159
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 403083635324287,
+					"parameters": {
+						"layout": "Battle"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 356299978899459,
+					"parameters": {
+						"variable": "IsSandbox",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 126334958656620,
+					"parameters": {
+						"audio-file": {
+							"path": "freesound_community-menu-button-88360"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 977828033225390
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Warfare",
+					"sid": 715257321228419
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 338005323470704,
+					"parameters": {
+						"layout": "Warfare1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 928025987904001,
+					"parameters": {
+						"variable": "IsSandbox",
+						"value": "false"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 717543146905259,
+					"parameters": {
+						"audio-file": {
+							"path": "freesound_community-menu-button-88360"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 268420656119416
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Guide",
+					"sid": 184514762425078
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 657896123885378,
+					"parameters": {
+						"layout": "Guide"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 350703809246635,
+					"parameters": {
+						"audio-file": {
+							"path": "freesound_community-menu-button-88360"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 221017550408289
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 572688040331486,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 221403520005643,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 352395962747180
+		}
+	],
+	"sid": 702269530117582
+}

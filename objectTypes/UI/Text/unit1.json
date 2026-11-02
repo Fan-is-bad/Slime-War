@@ -1,0 +1,16 @@
+{
+	"name": "unit1",
+	"plugin-id": "Text",
+	"sid": 470632315638310,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 212761045476868
+		}
+	],
+	"effectTypes": []
+}

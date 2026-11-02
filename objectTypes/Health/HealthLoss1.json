@@ -1,0 +1,55 @@
+{
+	"name": "HealthLoss1",
+	"plugin-id": "Sprite",
+	"sid": 767025469730036,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "num",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 227695507623570
+		},
+		{
+			"name": "dist",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 804361639639829
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3941131,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 977110083450510,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

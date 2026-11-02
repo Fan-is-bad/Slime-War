@@ -1,0 +1,21 @@
+{
+	"name": "UItext",
+	"plugin-id": "Text",
+	"sid": 968868501287470,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 542304120697994
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Slime_cost",
+		"FireSlime_cost",
+		"SlimeElite_cost",
+		"GhostSlime_cost",
+		"ShieldSlime_cost"
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"name": "Health",
+	"plugin-id": "Sprite",
+	"sid": 446568470205251,
+	"instanceVariables": [
+		{
+			"name": "SpriteUID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 320235061196710
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
+	"members": [
+		"HealthLoss2",
+		"HealthFull2",
+		"HealthLoss1",
+		"HealthFull1",
+		"Bar2",
+		"Bar1"
+	]
+}
